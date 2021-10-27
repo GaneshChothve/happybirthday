@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    transition: all 1s linear;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg {
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    animation: changebg 5s linear infinite;
+}
+
+
+@keyframes changebg {
+    0% {top: 0vh; left: 0vw;}
+    25% {top: -100vh; left: 0vw;}
+    50% {top: -100vh; left: -100vw;}
+    75% {top: 0vh; left: -100vw;}
+    100% {top: 0vh; left: 0vw;}
+}
+
+
+.bg > div {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg1 {
+    top: 0;
+    left: 0;
+    background-color: rgb(73, 71, 71);
+}
+.bg2 {
+    top: 0vh;
+    left: 100vw;
+    background-color: rgb(14, 30, 75);
+}
+.bg3 {
+    top: 100vh;
+    left: 100vw;
+    background-color: rgba(8, 58, 8, 0.596);
+}
+.bg4 {
+    top: 100vh;
+    left: 0vw;
+    background-color: rgb(40, 15, 65);
+
+}
+
+body > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#birthday {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background: red;
+    border: 1px solid cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-500px,-1000px);
+    transition: all 2s ease-in-out;
+}
+
+.box.active{
+    opacity: 1;
+    animation: rotate 0.2s linear infinite 3s alternate, opacityminmax 5s linear infinite 1s alternate;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(-10deg)}
+    50% {transform: rotate(0deg)}
+    100% {transform: rotate(10deg)}
+}
+
+@keyframes opacityminmax {
+    0% { opacity: 1;}
+    100% {opacity: 0.6;}
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:lighter;
+    display: none;
+    opacity: 0;
+    animation: changeopacity 0.5s linear infinite alternate;
+}
+
+@keyframes changeopacity {
+    0% {opacity: 0;}
+    100% {opacity: 100%;}
+}
+
+.balloon {
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    background: url('../img/ballon1.svg') no-repeat;
+    background-size: cover;
+    bottom: -300px;
+    font-size: 2rem;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
+    z-index: 2;
+}
+
+@keyframes fall {
+    to { transform: translateY(calc(-105vh - 400px));}
+}
