@@ -89,7 +89,7 @@ body > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(-500px,-1000px);
+    transform: translate(-50vw,-100vh);
     transition: all 2s ease-in-out;
 }
 
@@ -140,4 +140,15 @@ footer {
 
 @keyframes fall {
     to { transform: translateY(calc(-105vh - 400px));}
+}
+
+@media(max-width: 600px) {
+    .box {
+        width: 30px;
+        height: 30px;
+    }
+    .balloon {
+        width: 150px;
+        height: 150px;
+    }
 }
