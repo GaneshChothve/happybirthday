@@ -149,4 +149,7 @@ footer {
         width: 200px;
         height: 200px;
     }
+    footer {
+        top: calc(100vh - 100px);
+    }
 }
