@@ -129,8 +129,6 @@ footer {
     width: 250px;
     height: 250px;
     position: fixed;
-    background: url('../img/ballon1.svg') no-repeat;
-    background-size: cover;
     bottom: -300px;
     font-size: 2rem;
     transform: translateY(0);
