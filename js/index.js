@@ -45,6 +45,10 @@ function bounce() {
             audio.currentTime= 0;
             audio2.play();
             krishnadp.classList.add('active2')
+            audio2.addEventListener('ended',() => {
+                audio2.currentTime=0;
+                krishnadp.classList.remove('active2')
+            })
         })
     }
 }
