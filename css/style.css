@@ -111,7 +111,7 @@ body > div {
 
 footer {
     position: fixed;
-    bottom: 20px;
+    top: 90vh;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight:lighter;
