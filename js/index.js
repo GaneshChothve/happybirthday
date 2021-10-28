@@ -55,9 +55,13 @@ function addtimeup() {
     if(s2-s1==12){
         console.log(s2)
         let id3= setInterval(createBalloon,200)
+        const krishnadp= document.getElementsByClassName('krishnadp')[0]
+        krishnadp.style.display='block';
+        krishnadp.style.transition=`all 1s ease-in-out`
     }
     if(s2-s1==25){
         clearInterval(id2);
+        
         footer.style.display='block';
 
     }
