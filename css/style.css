@@ -124,13 +124,13 @@ body > div {
     justify-content: center;
 }
 
-.krishnaimg.active2 {
-    animation: scale 0.5s ease-in-out infite;
+.krishnadp.active2 {
+    animation: scale 0.5s ease-in-out infinite;
 }
 
 @keyframes scale {
-    0% {transform: scale(1)}
-    100% {transform: scale(2)}
+    0% {transform: scale(0.8)}
+    100% {transform: scale(1.5)}
 }
 
 #krishnaimg {
