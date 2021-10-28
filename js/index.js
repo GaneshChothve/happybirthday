@@ -2,9 +2,7 @@
 let textele1 = document.getElementById('happy')
 let textele2 = document.getElementById('birthday')
 let textele3 = document.getElementById('name')
-let audio= new Audio('../birthday-project/music/pungi_happy_birthday.mp3')
-
-let imgs= ['../birthday-project/img/ballon1.svg','../birthday-project/img/ballon2.svg','../birthday-project/img/ballon3.svg']
+let audio= new Audio('./music/pungi_happy_birthday.mp3')
 
 function createBox(s,textele) {
     const box = document.createElement('div');
@@ -17,7 +15,7 @@ let text = 'HAPPY'
 passText(text,textele1)
 text= 'BIRTHDAY'
 passText(text,textele2)
-text= 'KRISHNA MANE'
+text= 'KRISHNA'
 passText(text,textele3)
 
 function passText(text,textele) {
@@ -56,7 +54,7 @@ function addtimeup() {
     s2++;
     if(s2-s1==12){
         console.log(s2)
-        let id3= setInterval(createBalloon,300)
+        let id3= setInterval(createBalloon,200)
     }
     if(s2-s1==25){
         clearInterval(id2);
@@ -71,13 +69,14 @@ let id= setInterval(bounce,500)
 
 
 let k=0;
+let imgs= ['./img/ballon1.svg','./img/ballon2.svg','./img/ballon3.svg']
 function createBalloon() {
-    const balloon= document.createElement('div')
+    const balloon= document.createElement('img')
     balloon.classList.add('balloon')
     balloon.style.left =Math.pow(-1,k)*Math.random()*100+'vw'
-    balloon.style.animationDuration= Math.random()*2+3+'s'
+    balloon.style.animationDuration= Math.random()*2+1+'s'
     let c= Math.floor(Math.random()*3)
-    balloon.style.background=`url('${imgs[c]}') center center / cover no-repeat`;
+    balloon.src=`${imgs[c]}`;
     
     k++;
     document.body.appendChild(balloon)
