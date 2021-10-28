@@ -129,7 +129,7 @@ footer {
     width: 250px;
     height: 250px;
     position: fixed;
-    bottom: -300px;
+    top: 105vh;
     font-size: 2rem;
     transform: translateY(0);
     animation: fall 3s linear forwards;
@@ -137,7 +137,7 @@ footer {
 }
 
 @keyframes fall {
-    to { transform: translateY(calc(-105vh - 400px));}
+    to { transform: translateY(-150vh);}
 }
 
 @media(max-width: 600px) {
