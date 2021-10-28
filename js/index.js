@@ -3,6 +3,7 @@ let textele1 = document.getElementById('happy')
 let textele2 = document.getElementById('birthday')
 let textele3 = document.getElementById('name')
 let audio= new Audio('./music/pungi_happy_birthday.mp3')
+let audio2= new Audio('./music/birthday.mp3')
 
 function createBox(s,textele) {
     const box = document.createElement('div');
@@ -29,6 +30,7 @@ function passText(text,textele) {
 let boxes= document.querySelectorAll('.box')
 console.log(boxes)
 let footer= document.getElementsByTagName('footer')[0]
+const krishnadp= document.getElementsByClassName('krishnadp')[0]
 let i=0;
 function bounce() {
     boxes[i].style.transform='translate(0,0)'
@@ -41,6 +43,8 @@ function bounce() {
         audio.play()
         audio.addEventListener('ended',() => {
             audio.currentTime= 0;
+            audio2.play();
+            krishnadp.classList.add('active2')
         })
     }
 }
@@ -55,9 +59,8 @@ function addtimeup() {
     if(s2-s1==12){
         console.log(s2)
         let id3= setInterval(createBalloon,200)
-        const krishnadp= document.getElementsByClassName('krishnadp')[0]
-        krishnadp.style.display='block';
-        krishnadp.style.transition=`all 1s ease-in-out`
+        
+        krishnadp.classList.toggle('active')
     }
     if(s2-s1==25){
         clearInterval(id2);
